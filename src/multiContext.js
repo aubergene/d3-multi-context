@@ -40,6 +40,11 @@ Path.prototype = path.prototype = {
       d.arcTo(x1, y1, x2, y2, r)
     })
   },
+  arc: function (x, y, r, a0, a1, ccw) {
+    this.contexts.forEach(function (d) {
+      d.arc(x, y, r, a0, a1, ccw)
+    })
+  },
   rect: function(x, y, w, h) {
     this.contexts.forEach(function (d) {
       d.rect(x, y, w, h)
